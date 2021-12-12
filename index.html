@@ -19,6 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -50,9 +54,31 @@
             <p class="article__username">Michelle Appleton</p>
             <p class="article__date">28 Jun 2020</p>
           </div>
-          <img src="./images/icon-share.svg" alt="" class="article__share" />
+          <div class="article__social">
+            <span>SHARE</span>
+            <img
+              src="./images/icon-facebook.svg"
+              alt=""
+              class="article__icon"
+            />
+            <img
+              src="./images/icon-twitter.svg"
+              alt="twitter icon"
+              class="article__icon"
+            />
+            <img
+              src="./images/icon-pinterest.svg"
+              alt="pinterest icon"
+              class="article__icon"
+            />
+          </div>
+          <button class="article__btn">
+            <i class="fas fa-share"></i>
+          </button>
         </div>
       </article>
     </main>
+
+    <script src="./src/script.js"></script>
   </body>
 </html>

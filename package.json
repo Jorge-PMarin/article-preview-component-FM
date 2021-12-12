@@ -4,7 +4,7 @@
   "description": "![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./src/style.scss ./style.css"
+    "sass": "sass --watch ./src/style/main.scss ./style.css"
   },
   "keywords": [],
   "author": "",

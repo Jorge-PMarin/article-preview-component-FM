@@ -1,7 +1,55 @@
-* {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 html {
@@ -11,6 +59,9 @@ html {
 body {
   font-size: 1.3rem;
   font-family: "Manrope", sans-serif;
+}
+
+body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -35,22 +86,25 @@ body {
   background-color: #fff;
 }
 .article__wrapper {
-  margin: 3.2rem 3.2rem 0 3.2rem;
+  margin: 3.2rem 3.2rem 2rem 3.2rem;
 }
 .article__heading {
   color: #48556a;
   margin-bottom: 0.8em;
   font-size: 1.69rem;
+  font-weight: 700;
+  line-height: 1.4em;
 }
 .article__paragraph {
   color: #6d7f97;
   line-height: 1.6em;
-  margin-bottom: 1.4rem;
 }
 .article__author {
   display: flex;
   align-items: center;
-  padding: 2rem 3.2rem;
+  padding: 0 3.2rem;
+  height: 7.5rem;
+  transition: background-color 0.5s;
 }
 .article__avatar {
   max-width: 4rem;
@@ -65,12 +119,46 @@ body {
 .article__date {
   color: #9eafc2;
 }
-.article__share {
+.article__btn {
   margin-left: auto;
+  border: none;
   background-color: #ecf2f8;
-  padding: 0.9rem 0.8rem;
+  padding: 0.9rem 1rem;
   border-radius: 10rem;
   cursor: pointer;
+}
+.article__btn i {
+  color: #48556a;
+}
+.article__social {
+  display: none;
+}
+
+.article__author.active {
+  background-color: #48556a;
+}
+.article__author.active .article__avatar,
+.article__author.active .article__info {
+  display: none;
+}
+.article__author.active .article__btn {
+  background-color: #6d7f97;
+}
+.article__author.active .article__btn i {
+  color: #fff;
+  pointer-events: none;
+}
+.article__author.active .article__social {
+  display: flex;
+  align-items: center;
+}
+.article__author.active .article__social span {
+  color: #9eafc2;
+  letter-spacing: 0.4em;
+  margin-right: 1.2rem;
+}
+.article__author.active .article__icon:not(:last-child) {
+  margin-right: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
